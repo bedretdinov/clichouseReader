@@ -19,4 +19,9 @@ class ClichouseReader:
             req = requests.get(cls.host,params=cls.params) 
             return pd.read_csv(io.BytesIO(req.content), sep='\t')
             
+            
+ ClichouseReader.get_pandas('''
+    SELECT database, name FROM system.tables
+''')
+            
 ```
