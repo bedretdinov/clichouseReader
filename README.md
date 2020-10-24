@@ -20,7 +20,7 @@ class ClichouseReader:
             return pd.read_csv(io.BytesIO(req.content), sep='\t')
             
             
- ClichouseReader.get_pandas('''
+ClichouseReader.get_pandas('''
     SELECT database, name FROM system.tables
 ''')
             
